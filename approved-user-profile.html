@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
 </head>
 <body style="background-color: #fafafa;">
 <!-- start cssload-loader -->
@@ -262,6 +263,85 @@
 
 
 
+<div style="background-color: #1e1e1e80; position: absolute; top: 0; z-index: 999; width: 100%;" class="d-none overviewMenu">
+
+    
+    <div class="personal-details-container py-4" style="width: 380px; height: inherit; background-color: #f9fafc; position: absolute; right: 0;">
+
+        <div class="close-container">
+            <i class="la la-close text-white "></i>
+        </div>
+
+        <div class="first-container my-3">
+            <div class="first-container-image-container my-3">
+                <img src="./images/team12.png" class="my-2" width="80px" alt="">
+
+                <h3 class="transfer-amount text-center text-success "><span class="currency">NGN</span>150,000</h3>
+                
+            </div>
+            <hr>
+            <ul class="transaction-list">
+                <li class="transaction-detail">
+                    <small style="color: #aeaeae;">Processed on</small> <br>
+                    <strong>5 Days Ago</strong>
+                </li>
+                <li class="transaction-detail">
+                    <small style="color: #aeaeae;">Method</small> <br>
+                    <strong>Bank Transfer</strong>
+                </li>
+                <li class="transaction-detail">
+                    <small style="color: #aeaeae;">Wallet</small> <br>
+                    <strong>NGN Wallet</strong>
+                </li>
+                <li class="transaction-detail">
+                    <small style="color: #aeaeae;">Status</small>
+                    <div class="success-container d-flex align-items-center justify-content-center">
+                        <div class="inner-dot mr-1"></div>
+                        <small>Successful</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="second-container">
+            <h5 class="container-title my-3">Details</h5>
+            <hr class="my-2">
+            
+            <ul class="detail-list">
+                <li class="detail-item">
+                    <p>Reference</p>
+                    <div class="reference-container">
+                        <small>da66b2sa-1aag-asoa-b7CO-4686122Cdd70</small>
+                        <i class="la la-copy mr-2 text-color-4"></i>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <p>Bank Name</p>
+                    <small>United Bank of Africa</small>
+                </li>
+                <li class="detail-item">
+                    <p>Account Number</p>
+                    <small>2189381417</small>
+                </li>
+                <li class="detail-item">
+                    <p>CounterParty</p>
+                    <small>United Bank of Africa - RowlandStudio</small>
+                </li>
+                <li class="detail-item">
+                    <p>Fee</p>
+                    <small>NGN 30.00</small>
+                </li>
+                <li class="detail-item">
+                    <p>Reason</p>
+                    <small>For your success</small>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</div>
+
 
 <!-- start back-to-top -->
 <div id="back-to-top">
@@ -285,6 +365,21 @@
 <script src="js/animated-headline.js"></script>
 <script src="js/jquery.ripples-min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+    const overviewMenu = document.querySelector(".overviewMenu");
+    const nameOpensSideBar = document.querySelector(".nameOpensSideBar");
+    const closeSidebar = document.querySelector(".close-container");
+
+    nameOpensSideBar.addEventListener("click", ()=> {
+        overviewMenu.classList.remove("d-none");
+    })
+
+    closeSidebar.addEventListener("click", ()=> {
+        overviewMenu.classList.add("d-none");
+    })
+</script>
+
 </body>
 
 </html>
